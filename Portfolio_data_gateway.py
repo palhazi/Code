@@ -34,6 +34,8 @@ class TestApp(EClient, EWrapper):
 
     def end(self):
         self.reqAccountUpdates(False, "")
+        self.done = True
+        self.disconnect()
 
 
 app = TestApp()
